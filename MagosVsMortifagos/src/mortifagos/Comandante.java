@@ -1,9 +1,13 @@
 package mortifagos;
 
+import clases.TipoPersonaje;
+import hechizos.HechizoFactory;
+import hechizos.TipoHechizo;
+
 public class Comandante extends Mortifago {
-    public Comandante(String nombre, int nivelMagia, int puntosVida) {
-        super(nombre, nivelMagia, puntosVida);
-        hechizos.add("Avada Kedavra");
-        hechizos.add("Sectumsempra");
+    public Comandante(String nombrePersonaje, int nivelMagia, int puntosVida) {
+        super(TipoPersonaje.Comandante, nombrePersonaje, nivelMagia, puntosVida);
+        hechizos.add(HechizoFactory.crearHechizo(TipoHechizo.AvadaKedavra));
+        hechizos.add(HechizoFactory.crearHechizo(TipoHechizo.Protego));
     }
 }

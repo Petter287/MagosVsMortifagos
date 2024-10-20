@@ -1,7 +1,6 @@
 package hechizos;
 
 import clases.Personaje;
-import interfaces.*;
 
 public class AvadaKedavra implements Hechizo {
     @Override

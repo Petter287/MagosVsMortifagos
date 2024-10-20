@@ -1,10 +1,12 @@
 package mortifagos;
 
 import clases.Personaje;
+import clases.TipoPersonaje;
 
 public abstract class Mortifago extends Personaje {
-    public Mortifago(String nombre, int nivelMagia, int puntosVida) {
-        super(nombre, nivelMagia, puntosVida);
+    public Mortifago(TipoPersonaje tipo, String nombrePersonaje, int nivelMagia, int puntosVida) {
+    	super(tipo, nombrePersonaje, nivelMagia, puntosVida);
+    	    	
     }
 
     @Override

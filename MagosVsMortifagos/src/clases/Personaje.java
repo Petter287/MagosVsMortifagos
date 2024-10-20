@@ -7,6 +7,7 @@ import hechizos.Hechizo;
 
 public abstract class Personaje {
 	//ATRIBUTOS
+	protected TipoPersonaje tipo;
 	protected String nombre;
     protected int nivelMagia, puntosVida;
     protected List<Hechizo> hechizos;
@@ -21,7 +22,8 @@ public abstract class Personaje {
     }
     
 	//CONSTRUCTORES
-    public Personaje(String nombre, int nivelMagia, int puntosVida) {
+    public Personaje(TipoPersonaje tipo, String nombre, int nivelMagia, int puntosVida) {
+    	this.tipo = tipo;
         this.nombre = nombre;
         this.nivelMagia = nivelMagia;
         this.puntosVida = puntosVida;
@@ -43,4 +45,6 @@ public abstract class Personaje {
             System.out.println(nombre + " tiene " + puntosVida + " puntos de vida restantes.");
         }
     }
+    
+    
 }
