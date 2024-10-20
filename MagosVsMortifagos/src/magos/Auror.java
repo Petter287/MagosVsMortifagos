@@ -3,7 +3,9 @@ package magos;
 import clases.TipoPersonaje;
 
 public class Auror extends Mago {
-    public Auror(String nombrePersonaje, int nivelMagia, int puntosVida, boolean armado, boolean protegido) {
-        super(TipoPersonaje.Auror, nombrePersonaje, nivelMagia, puntosVida, armado, protegido);
+	private static final int NIVEL_MAGICO = 10;
+	
+    public Auror(String nombrePersonaje, float puntosVida, boolean armado, boolean protegido) {
+        super(TipoPersonaje.Auror, nombrePersonaje, NIVEL_MAGICO, puntosVida, armado, protegido);
     }
 } 
