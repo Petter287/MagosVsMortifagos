@@ -1,17 +1,19 @@
 package hechizos;
 
 public class HechizoFactory {
-	public static Hechizo crearHechizo(String tipo) {
+	public static Hechizo crearHechizo(TipoHechizo tipo) {
 		switch (tipo) {
-		case "Expelliarmus":
+		case TipoHechizo.Expelliarmus:
 			return new Expelliarmus();
 
-		case "Avada Kedavra":
+		case TipoHechizo.AvadaKedavra:
 			return new AvadaKedavra();
 
-		case "Protego":
+		case TipoHechizo.Protego:
 			return new Protego();
-
+			
+		case TipoHechizo.ExpectoPatronum:
+			return new ExpectoPatronum();
 		default:
 			throw new IllegalArgumentException("Tipo de hechizo desconocido");
 		}

@@ -1,10 +1,11 @@
 package magos;
 
 import clases.Personaje;
+import clases.TipoPersonaje;
 
 public abstract class Mago extends Personaje {
-    public Mago(String nombre, int nivelMagia, int puntosVida) {
-        super(nombre, nivelMagia, puntosVida);
+    public Mago(TipoPersonaje tipo, String nombrePersonaje, int nivelMagia, int puntosVida) {
+        super(tipo, nombrePersonaje, nivelMagia, puntosVida);
     }
 
     @Override
@@ -16,4 +17,6 @@ public abstract class Mago extends Personaje {
             System.out.println(nombre + " no puede lanzar el hechizo " + hechizo);
         }
     }
+    
+  
 }

@@ -1,9 +1,13 @@
 package magos;
 
+import clases.TipoPersonaje;
+import hechizos.HechizoFactory;
+import hechizos.TipoHechizo;
+
 public class Profesor extends Mago {
-    public Profesor(String nombre, int nivelMagia, int puntosVida) {
-        super(nombre, nivelMagia, puntosVida);
-        hechizos.add("Stupefy");
-        hechizos.add("Wingardium Leviosa");
+    public Profesor(String nombrePersonaje, int nivelMagia, int puntosVida) {
+        super(TipoPersonaje.Profesor, nombrePersonaje, nivelMagia, puntosVida);
+        hechizos.add(HechizoFactory.crearHechizo(TipoHechizo.AvadaKedavra));
+        hechizos.add(HechizoFactory.crearHechizo(TipoHechizo.Protego));
     }
 }

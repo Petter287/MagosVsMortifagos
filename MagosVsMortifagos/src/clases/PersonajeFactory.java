@@ -1,41 +1,59 @@
 package clases;
 
 import hechizos.HechizoFactory;
+import hechizos.TipoHechizo;
 import magos.*;
 import mortifagos.*;
 
 public class PersonajeFactory {
-	public static Personaje crearPersonaje(String tipo, String nombre) {
-		switch (tipo) {
-		case "Auror":
-			Personaje auror = new Auror(nombre, 10, 120);
-			auror.agregarHechizo(HechizoFactory.crearHechizo("Expelliarmus"));
-			auror.agregarHechizo(HechizoFactory.crearHechizo("Protego"));
-			return auror;
-
-		case "Estudiante":
-			Personaje estudiante = new Estudiante(nombre, 5, 80);
-			estudiante.agregarHechizo(HechizoFactory.crearHechizo("Expelliarmus"));
-			return estudiante;
-
-		case "Profesor":
-			Personaje profesor = new Profesor(nombre, 8, 100);
-			profesor.agregarHechizo(HechizoFactory.crearHechizo("Protego"));
-			return profesor;
-
-		case "Seguidor":
-			Personaje seguidor = new Seguidor(nombre, 7, 90);
-			seguidor.agregarHechizo(HechizoFactory.crearHechizo("Expelliarmus"));
-			return seguidor;
-
-		case "Comandante":
-			Personaje comandante = new Comandante(nombre, 12, 150);
-			comandante.agregarHechizo(HechizoFactory.crearHechizo("Avada Kedavra"));
-			comandante.agregarHechizo(HechizoFactory.crearHechizo("Expelliarmus"));
-			return comandante;
-
+	
+	public static Mago crearMago(TipoPersonaje tipo, String nombrePersonaje) {
+		
+		Mago magoNuevo;
+		
+		switch (tipo) {	
+		
+		case TipoPersonaje.Auror:
+			magoNuevo = new Auror(nombrePersonaje, 10, 120);
+			magoNuevo.agregarHechizo(HechizoFactory.crearHechizo(TipoHechizo.Expelliarmus));
+			magoNuevo.agregarHechizo(HechizoFactory.crearHechizo(TipoHechizo.Protego));
+			break;
+		case TipoPersonaje.Estudiante:
+			magoNuevo = new Estudiante(nombrePersonaje, 10, 120);
+			magoNuevo.agregarHechizo(HechizoFactory.crearHechizo(TipoHechizo.Expelliarmus));
+			magoNuevo.agregarHechizo(HechizoFactory.crearHechizo(TipoHechizo.Protego));
+			break;
+		case TipoPersonaje.Profesor:
+			magoNuevo = new Profesor(nombrePersonaje, 10, 120);
+			magoNuevo.agregarHechizo(HechizoFactory.crearHechizo(TipoHechizo.Expelliarmus));
+			magoNuevo.agregarHechizo(HechizoFactory.crearHechizo(TipoHechizo.Protego));
+			break;
 		default:
-			throw new IllegalArgumentException("Tipo de personaje desconocido");
+			throw new IllegalArgumentException("Tipo de mago desconocido");
 		}
+		return magoNuevo;
 	}
+	
+	public static Mortifago crearMortifago(TipoPersonaje tipo, String nombrePersonaje) {
+		
+		Mortifago mortifagoNuevo;
+		
+		switch (tipo) {	
+		
+		case TipoPersonaje.Comandante:
+			mortifagoNuevo = new Comandante(nombrePersonaje, 10, 120);
+			mortifagoNuevo.agregarHechizo(HechizoFactory.crearHechizo(TipoHechizo.Expelliarmus));
+			mortifagoNuevo.agregarHechizo(HechizoFactory.crearHechizo(TipoHechizo.Protego));
+			break;
+		case TipoPersonaje.Seguidor:
+			mortifagoNuevo = new Seguidor(nombrePersonaje, 10, 120);
+			mortifagoNuevo.agregarHechizo(HechizoFactory.crearHechizo(TipoHechizo.Expelliarmus));
+			mortifagoNuevo.agregarHechizo(HechizoFactory.crearHechizo(TipoHechizo.Protego));
+			break;
+		default:
+			throw new IllegalArgumentException("Tipo de mortifago desconocido");
+		}
+		return mortifagoNuevo;
+	}
+	
 }
