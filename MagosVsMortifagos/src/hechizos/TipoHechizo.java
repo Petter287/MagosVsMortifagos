@@ -1,5 +1,11 @@
 package hechizos;
 
 public enum TipoHechizo {
-	AvadaKedavra, ExpectoPatronum, Expelliarmus, Protego;
+	AvadaKedavra,
+	Crusio,
+	ExpectoPatronum,
+	Expelliarmus,
+	Imperio,
+	Sectumsempra,
+	Protego;
 }

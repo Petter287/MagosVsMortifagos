@@ -4,18 +4,7 @@ import clases.Personaje;
 import clases.TipoPersonaje;
 
 public abstract class Mortifago extends Personaje {
-    public Mortifago(TipoPersonaje tipo, String nombrePersonaje, int nivelMagia, int puntosVida) {
-    	super(tipo, nombrePersonaje, nivelMagia, puntosVida);
-    	    	
-    }
-
-    @Override
-    public void lanzarHechizo(String hechizo, Personaje enemigo) {
-        if (hechizos.contains(hechizo)) {
-            System.out.println(nombre + " lanza el hechizo oscuro " + hechizo + " contra " + enemigo.getNombre());
-            enemigo.recibirDanio(nivelMagia * 15);  // mayor daño para los Mortífagos -> Para ver
-        } else {
-            System.out.println(nombre + " no puede lanzar el hechizo " + hechizo);
-        }
+    public Mortifago(TipoPersonaje tipo, String nombrePersonaje, int nivelMagia, int puntosVida, boolean armado, boolean protegido) {
+    	super(tipo, nombrePersonaje, nivelMagia, puntosVida, armado, protegido);
     }
 }
