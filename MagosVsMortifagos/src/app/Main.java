@@ -1,5 +1,6 @@
 package app;
 
+import java.io.IOException;
 import java.util.Random;
 
 import batalla.Batalla;
@@ -9,7 +10,12 @@ import magos.TipoMago;
 import mortifagos.TipoMortifago;
 
 public class Main {
-	public static void main(String[] args) {
+	public static String reglasMagosPath = "C:/Users/Admin/N/UNLaM/PdP/MagosVsMortifagosFinal/reglasMagos.pl",
+            			 reglasMortifagosPath = "C:/Users/Admin/N/UNLaM/PdP/MagosVsMortifagosFinal/reglasMortifagos.pl",
+                         baseDeConocimientosMagos = "C:/Users/Admin/N/UNLaM/PdP/MagosVsMortifagosFinal/tmpBaseDeConocimientosMagos.pl",
+                         baseDeConocimientosMortifagos = "C:/Users/Admin/N/UNLaM/PdP/MagosVsMortifagosFinal/tmpBaseDeConocimientosMortifagos.pl";
+	
+	public static void main(String[] args) throws IOException {
 		Batallon batallonMagos = crearBatallonMago();
 		Batallon batallonMortifagos = crearBatallonMortifago();
 		Batalla batalla = new Batalla(batallonMagos, batallonMortifagos);

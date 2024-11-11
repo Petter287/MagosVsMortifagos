@@ -1,5 +1,6 @@
 package clases;
 
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -128,5 +129,9 @@ public abstract class Personaje {
 			System.out.println(nombre + " tiene " + puntosVida + " puntos de vida restantes.");
 		
 		return true;
+	}
+	
+	public void actualizarEstadisticaPorRonda(PrintWriter escritor, String tipo, int ronda) {
+		escritor.println("estado_" + tipo + "(" + nombre.toLowerCase() + ", " + nivelMagia + ", " + puntosVida + ", " + Integer.toString(ronda) + ").");
 	}
 }
