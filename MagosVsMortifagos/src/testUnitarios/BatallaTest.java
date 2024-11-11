@@ -4,6 +4,7 @@ import static org.junit.Assert.assertThrows;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
@@ -91,7 +92,7 @@ class BatallaTest {
 	}
 
 	@Test
-	void batallonMagosIniciaSinSaludablesEnBatalla() { // ver return realizarBatalla
+	void batallonMagosIniciaSinSaludablesEnBatalla() throws IOException { // ver return realizarBatalla
 		List<Personaje> magos = batallonMagos.getAtacantes();
 
 		for (Personaje mago : magos)
@@ -102,7 +103,7 @@ class BatallaTest {
 	}
 
 	@Test
-	void batallonMortifagosIniciaSinSaludablesEnBatalla() { // ver return realizarBatalla
+	void batallonMortifagosIniciaSinSaludablesEnBatalla() throws IOException { // ver return realizarBatalla
 		List<Personaje> mortifagos = batallonMortifagos.getAtacantes();
 
 		for (Personaje mortifago : mortifagos)

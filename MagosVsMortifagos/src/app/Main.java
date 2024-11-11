@@ -10,10 +10,10 @@ import magos.TipoMago;
 import mortifagos.TipoMortifago;
 
 public class Main {
-	public static String reglasMagosPath = "C:/Users/Admin/N/UNLaM/PdP/MagosVsMortifagosFinal/reglasMagos.pl",
-            			 reglasMortifagosPath = "C:/Users/Admin/N/UNLaM/PdP/MagosVsMortifagosFinal/reglasMortifagos.pl",
-                         baseDeConocimientosMagos = "C:/Users/Admin/N/UNLaM/PdP/MagosVsMortifagosFinal/tmpBaseDeConocimientosMagos.pl",
-                         baseDeConocimientosMortifagos = "C:/Users/Admin/N/UNLaM/PdP/MagosVsMortifagosFinal/tmpBaseDeConocimientosMortifagos.pl";
+	public static String reglasMagosPath = "C:/Users/DELL 5510/Documents/MagosVsMortifagos_Github/reglasMagos.pl",
+            			 reglasMortifagosPath = "C:/Users/DELL 5510/Documents/MagosVsMortifagos_Github/reglasMortifagos.pl",
+                         baseDeConocimientosMagos = "C:/Users/DELL 5510/Documents/MagosVsMortifagos_Github/tmpBaseDeConocimientosMagos.pl",
+                         baseDeConocimientosMortifagos = "C:/Users/DELL 5510/Documents/MagosVsMortifagos_Github/tmpBaseDeConocimientosMortifagos.pl";
 	
 	public static void main(String[] args) throws IOException {
 		Batallon batallonMagos = crearBatallonMago();

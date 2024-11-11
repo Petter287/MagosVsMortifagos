@@ -8,6 +8,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
-	<classpathentry kind="lib" path="D:/Users/Usuario/N/UNLaM/PdP/swipl/lib/jpl.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/swipl/lib/jpl.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
